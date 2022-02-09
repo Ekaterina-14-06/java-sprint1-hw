@@ -6,7 +6,8 @@ public class Main {
         System.out.println("Выполнила: Лядова Е.В.");
         System.out.println("");
 
-        StepTracker stepTracker = new StepTracker(0, 0, 0);
+        StepTracker stepTracker = new StepTracker();
+        //StepTracker stepTracker = new StepTracker(0, 0, 0);
 
         Scanner scanner = new Scanner(System.in);
         printMenu();
@@ -59,7 +60,7 @@ public class Main {
                     steps = scanner.nextInt();
                 }
                 stepTracker.purpose = steps;
-                System.out.println("Новая цель по шагам: " + steps);
+
                 // Обработка ошибочно введённых данных
             } else {
                 System.out.print("Вы ввели несуществующий пункт меню. Повторите ввод: ");
@@ -69,6 +70,7 @@ public class Main {
             userInput = scanner.nextInt();
         }
         System.out.println ("Программа завершена.");
+        scanner.close();
     }
 
     private static void printMenu() {
