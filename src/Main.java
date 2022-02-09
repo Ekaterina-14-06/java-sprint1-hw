@@ -60,7 +60,7 @@ public class Main {
                     steps = scanner.nextInt();
                 }
                 stepTracker.purpose = steps;
-
+                System.out.println("Ваша новая цель по шагам: "+ steps);
                 // Обработка ошибочно введённых данных
             } else {
                 System.out.print("Вы ввели несуществующий пункт меню. Повторите ввод: ");
